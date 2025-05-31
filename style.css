@@ -46,13 +46,14 @@ body {
     font-size: .9rem;
 }
 
-
+html {
+    scroll-behavior: smooth;
+}
 .container {
     width: var(--container-width-lg);
     max-width: 1800px;
     margin-inline: auto;
 }
-
 section {
   margin-top: 3rem;
   width: 100vw;
@@ -289,7 +290,7 @@ footer {
 .footer__container {
    display: grid;
    grid-template-columns: repeat(4, 1fr);
-   justify-items: center;
+   /* justify-items: center;   */
 }
 
 footer h4 {
@@ -297,8 +298,8 @@ footer h4 {
     margin-bottom: .6rem;
 }
 
-footer ul il {
-    padding: .4rem 0;
+footer ul{
+    padding: 0;
 }
 
 footer ul a {
@@ -316,6 +317,90 @@ footer ul a:hover {
     color: var(--color-grey-300);
     margin-top: 4rem;
 }
+/* ====================================== SEARCH ====================================== */
+
+.search__bar {
+    margin-top: 7rem;
+}
+
+.search__bar-container {
+    position: relative;
+    width: 30rem;
+    background: var(--color-grey-900);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    overflow: hidden;
+    padding: .6rem 1rem;
+    border-radius: var(--card-border-radius-2);
+    color: var(--color-grey-200);
+}
+
+.search__bar-container div {
+    display:flex;
+    align-items: center;
+}
+
+.search__bar input {
+    background: transparent;
+    margin-left: .7rem;
+    padding: .5rem 0;
+    width: 100%;
+}
+
+.search__bar input::placeholder {
+    color: var(--color-grey-300);
+}
+
+/* ====================================== button styles ====================================== */
+
+.btn {
+    display: inline-block;
+    width: fit-content;
+    padding: .6rem 1.2rem;
+    background-color: var(--color-primary);
+    border-radius: var(--card-border-radius-2);
+    cursor: pointer;
+    transition: var(--transition);
+    color: var(--color-white);
+}
+/* ====================================== SINGLE POST ====================================== */
+.single__post {
+    margin-top: 6rem 0 2rem;
+    z-index: 100;
+}
+
+.single__post-container {
+    width: var(--form-width);
+    background: var(--color-grey-900);
+    padding: 1rem 2rem 3rem;
+}
+.single__post-thumbnail {
+    margin: 1.5rem 0 1rem;
+}
+.single__post-container p {
+    margin-top: 1rem;
+    line-height: 1.7;
+}
+
+/* ====================================== CATEGORY POSTS ====================================== */
+
+.category__title {
+    height: 15rem;
+    margin-top: 4.5rem;
+    background: var(--color-grey-900);
+    display: grid;
+    place-items: center;
+}
+
+/* ====================================== EMPTY PAGES ====================================== */
+
+.empty__page {
+    height: 70vh;
+    display: grid;
+    place-content: center;
+}
+
 
 /* ====================================== MEDIA QUERIES (TABLETS)====================================== */
 
@@ -334,7 +419,7 @@ footer ul a:hover {
     h5 {
         font-size: .8rem;
     }
-    /* ++== NAV STYLES ==++ */
+    /* ++++++++== NAV STYLES ==++++++++ */
     nav button {
      display: inline-block;
      font-size: 1.5rem;
@@ -415,5 +500,59 @@ footer ul a:hover {
     .footer__container {
         grid-template-columns: repeat(2, 1fr);
         gap: 2rem;
+    }
+    .footer__container li {
+        padding: 0;
+        margin: 0;
+    }
+
+    /* ====================================== BLOG ====================================== */
+    .search__bar-container {
+        width: 60%;
+    }
+
+}
+
+/* ====================================== MEDIA QUERIES (SMALL DEVICES)====================================== */
+
+@media screen and (max-width: 600px) {
+    /* ++== GENERAL STYLES ==++ */
+    section {
+        margin-top: 2rem;
+    }
+    h1 {
+        font-size: 2rem;
+    }
+
+    .featured {
+        margin-top: 6rem;
+    }
+
+    .featured__container {
+        grid-template-columns: 1fr;
+        gap: 0;
+    }
+    .posts__container {
+        grid-template-columns: 1fr;
+    }
+    .category__buttons-container {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    .footer__container {
+        grid-template-columns: 1fr;
+        text-align: center;
+        gap: 2rem;
+    }
+
+    /* ====================================== BLOG ====================================== */
+    .search__bar-container {
+        width: var(--container-width-md);
+    }
+
+    /* ====================================== SINGLE POST ====================================== */
+    .single__post-container {
+        margin-top: 6rem;
+        background-color: transparent;
+        padding: 0;
     }
 }
