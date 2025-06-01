@@ -365,6 +365,19 @@ footer ul a:hover {
     transition: var(--transition);
     color: var(--color-white);
 }
+
+.btn.sm {
+    padding: .3rem .7rem;
+    font-size: .8rem;
+}
+.btn.danger {
+    background: var(--color-red);
+}
+
+.btn:hover {
+    background: var(--color-white);
+    color: var(--color-bg);
+}
 /* ====================================== SINGLE POST ====================================== */
 .single__post {
     margin-top: 6rem 0 2rem;
@@ -463,6 +476,32 @@ input, textarea, select {
 
 .form__section small a {
     color: var(--color-primary);
+}
+
+/* ====================================== DASHBOARD QUERIES ====================================== */
+.dashboard {
+    margin-top: 6rem;
+}
+
+.dashboard__container {
+    display: grid;
+    grid-template-columns: 14rem auto;
+    gap: 1rem;
+    background: var(--color-grey-900);
+    padding: 2rem;
+    margin-bottom: 5rem;
+}
+
+.dashboard aside a {
+    background-color: var(--color-primary);
+    display: flex;
+    gap: 1rem;
+    align-items: center;
+    padding: 1.6rem;
+}
+
+.dashboard aside ul li:not(:last-child) {
+    
 }
 
 /* ====================================== MEDIA QUERIES (TABLETS)====================================== */
