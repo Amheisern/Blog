@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Responsive Multipage Blog</title>
+    <!-- CUSTOM CSS -->
+    <link rel="stylesheet" href="style.css">
+    <!-- ICONSCOUT CDN-->
+    <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.8/css/line.css">
+    <!-- GOOGLE FONTS Montserrat -->
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    
+</head>
+<body>
+<section class="form__section">
+    <div class="container form__section-container">
+        <h2>Sign Up</h2>
+        <div class="alert__message success">
+            Error occurred while signing up. Please try again.
+        </div>
+        <form action="" enctype="multipart/form-data">
+            <input type="text" placeholder="First Name" required>
+            <input type="text" placeholder="Last Name" required>
+            <input type="text" placeholder="Username" required>
+            <input type="email" placeholder="Email" required>
+            <input type="password" placeholder="Create Password" required>
+            <input type="password" placeholder="Confirm Password" required>
+            <div class="form__control">
+                <label for="avatar"></label>
+                    <input type="file" id="avatar">
+                    I agree to the <a href="#">Terms & Conditions</a>
+            </div>
+            <button type="submit" class="btn">Sign Up</button>
+            <small>Already have an account? <a href="signin.html">Sign In</a></small>
+        </form>
+    </div>
+</section>
+
+</body>
+</html> 
